@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 const META_BASE = "https://graph.facebook.com/v19.0";
